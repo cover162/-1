@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns: 150px auto 150px;
+            grid-template-areas:
+                "a a a"
+                "b c d"
+                "e e e";
+            color: white;
+            text-align: center;
+        }
+
+        .grid * {
+            text-align: center;
+        }
+
+        .grid div {
+            height: 300px;
+            margin: 2px;
+            background-color: #1dd1e9;
+        }
+
+
+        .grid .left {
+            grid-area: b;
+        }
+
+        .grid .mid {
+            grid-area: c;
+        }
+
+        .grid .right {
+            grid-area: d;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid">
+        <div class="mid"> mid </div>
+        <div class="left"> left </div>
+        <div class="right"> right </div>
+
+    </div>
+</body>
+
+</html>
